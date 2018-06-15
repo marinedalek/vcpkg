@@ -4,6 +4,7 @@ project(gl3w C)
 set(HEADER_FILES
     "include/GL/gl3w.h"
     "include/GL/glcorearb.h"
+    "include/KHR/khrplatform.h"
 )
 
 find_package(OpenGL REQUIRED)
@@ -38,4 +39,5 @@ install(
 
 if(NOT DISABLE_INSTALL_HEADERS)
     install(DIRECTORY include/GL DESTINATION include)
+    install(DIRECTORY include/KHR DESTINATION include)
 endif()
